@@ -1,0 +1,1 @@
+let cardNumber = document.querySelector("#cardNumber").innerHTML;
