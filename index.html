@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Interactive card details form</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>
   <div id="contener">
@@ -14,34 +15,32 @@
         <img src="images/bg-card-front.png">
         <span id="card_front_text">
           <span id="cardNumber">0000 0000 0000 0000</span>
-          Jane Appleseed
-          00/00
+          <span id="owner">Jane Appleseed</span>
+          <span id="month">00</span>/<span id="year">00</span>
         </span>
       </div>
       <div id="card_back">
         <img src="images/bg-card-back.png">
-        <span id="card_back_text">
-          000
-        </span>
+        <span id="card_back_text">000</span>
       </div>
     </div>
     <div id="section_right">
       <div class="wrap">
         <span class="title">Cardholder Name</span>
-        <input class="inputText" type="text" placeholder="e.g. Jane Appleseed">
+        <input id="inputOwner" class="inputText" type="text" placeholder="e.g. Jane Appleseed" autofocus maxlength="40">
       </div>
       <div class="wrap">
         <span class="title">Card Number</span>
-        <input id="inputCardNumber" class="inputText" type="text" placeholder="e.g. 1234 5678 9123 0000">
+        <input id="inputCardNumber" class="inputText" type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
       </div class="wrap">
       <div>
         <span class="title">Exp. Date (MM/YY)</span><br>
-        <input class="inputText" type="text" placeholder="MM" style="width: 60px;">
-        <input class="inputText" type="text" placeholder="YY" style="width: 60px;">
+        <input id="monthInput" class="inputText" type="text" placeholder="MM" maxlength="2" style="width: 60px;">
+        <input id="yearInput" class="inputText" type="text" placeholder="YY" maxlength="2" style="width: 60px;">
       </div>
       <div class="wrap">
-        <span class="title">CVC</span>
-        <input class="inputText" type="text" placeholder="e.g. 123">
+        <span  class="title">CVC</span>
+        <input id="cvcInput" class="inputText" type="text" placeholder="e.g. 123" maxlength="3">
       </div>
       <input id="confirmBtn" type="button" value="Confirm">
       <div id="completed">
