@@ -24,19 +24,24 @@
 #card_front {
     position: relative;
     width: 447px;
-    height: 225px;
-    transform: translate(20%, 50%);
-}
-#card_front_text {
-    position: absolute;
-    top: 70%;
-    left: 0;
+    height: 245px;
+    transform: translate(25%, 50%);
+    background-image: url("images/bg-card-front.png");
+    border-radius: 20px;
+    -webkit-box-shadow: 9px 39px 85px -39px rgba(146, 146, 146, 1);
+-moz-box-shadow: 9px 39px 85px -39px rgba(146, 146, 146, 1);
+box-shadow: 9px 39px 85px -39px rgba(146, 146, 146, 1);
 }
 #card_back {
     position: relative;
     width: 447px;
-    height: 225px;
-    transform: translate(40%, 70%);
+    height: 245px;
+    transform: translate(45%, 70%);
+    border-radius: 20px;
+    background-image: url("images/bg-card-back.png");
+    -webkit-box-shadow: 9px 39px 85px -39px rgba(146, 146, 146, 1);
+-moz-box-shadow: 9px 39px 85px -39px rgba(146, 146, 146, 1);
+box-shadow: 9px 39px 85px -39px rgba(146, 146, 146, 1);
 }
 #card_back_text {
     position: absolute;
@@ -45,24 +50,22 @@
 }
 #section_right {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
     width: 100%;
+    align-items: center;
     justify-content: center;
     background: hsl(0, 0%, 100%);
-    border: 1px solid black;
     text-transform: uppercase;
     letter-spacing: 4px;
 }
 .wrap {
     display: flex;
     flex-direction: column;
+    margin-bottom: 25px;
 }
 .title {
     font-weight: bold;
     color: hsl(278, 68%, 11%);
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: 15px;
 }
 .inputText {
@@ -72,7 +75,7 @@
     border: 2px solid hsl(270, 3%, 87%);
     border-radius: 10px;
     padding: 10px;
-    width: 300px;
+    width: 400px;
 }
 .inputText:hover {
     cursor: pointer;
@@ -87,9 +90,11 @@
     border: 1px solid hsl(270, 3%, 87%);
     border-radius: 10px;
     padding: 10px;
-    width: 300px;
-    margin-top: 10px;
+    width: 400px;
+    height: 55px;
+    margin-top: 30px;
     background-color: hsl(278, 68%, 11%);
+    font-weight: bold;
 }
 #confirmBtn:hover {
     cursor: pointer;
@@ -101,4 +106,51 @@
     position: absolute;
     left: 2px;
     bottom: 2px;
+}
+#cardNumber {
+    position: absolute;
+    font-size: 30px;
+    left: 35px;
+    bottom: 70px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#owner {
+    position: absolute;
+    left: 35px;
+    bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#date {
+    position: absolute;
+    right: 35px;
+    bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#card_logo {
+    position: absolute;
+    left: 35px;
+    top: 25px;
+}
+#form {
+    position: relative;
+    margin-left: 50px;
+}
+#wrap_cvc {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0px;
+    bottom: 85px;
+}
+#wrap_date {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.error_message {
+    letter-spacing: 0px;
+    font-size: 15px;
 }

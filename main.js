@@ -15,27 +15,44 @@ inputOwner.keyup(function(e) {
         owner.text("Jane Appleseed");
     }
 });
-inputCardNumber.keyup(function(e) {
+inputCardNumber.bind('keyup keypress', function (e) {
     cardNumber.text(e.target.value);
     if (e.target.value == "") {
         cardNumber.text("0000 0000 0000 0000");
     }
+    $(this).val(function (index, value) {
+        return value.replace(/[^0-9]+/gi, '').replace(/(.{4})/g, '$1 ');
+      });
 });
 cvcInput.keyup(function(e) {
-    cvc.text(e.target.value);
+    if (e.target.value.length == 1) {
+        cvc.text("00" + e.target.value);
+    } else if (e.target.value.length == 2) {
+        cvc.text("0" + e.target.value);
+    } else {
+        cvc.text(e.target.value);
+    }
     if (e.target.value == "") {
         cvc.text("000");
     }
 });
-monthInput.keyup(function(e) {
-    month.text(e.target.value);
-    if (e.target.value == "") {
-        month.text("00");
+yearInput.bind('keyup mouseup', function (e) {
+    if (e.target.value < 10) {
+        year.text("0" + e.target.value);
+    } else {
+        year.text(e.target.value);
     }
-});
-yearInput.keyup(function(e) {
-    year.text(e.target.value);
     if (e.target.value == "") {
         year.text("00");
+    }
+});
+monthInput.bind('keyup mouseup', function (e) {
+    if (e.target.value < 10) {
+        month.text("0" + e.target.value);
+    } else {
+        month.text(e.target.value);
+    }
+    if (e.target.value == "") {
+        month.text("00");
     }
 });

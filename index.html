@@ -12,47 +12,60 @@
   <div id="contener">
     <div id="section_left">
       <div id="card_front">
-        <img src="images/bg-card-front.png">
         <span id="card_front_text">
+          <img id="card_logo" src="images/card-logo.svg">
           <span id="cardNumber">0000 0000 0000 0000</span>
           <span id="owner">Jane Appleseed</span>
-          <span id="month">00</span>/<span id="year">00</span>
+          <span id="date">
+            <span id="month">00</span>/<span id="year">00</span>
+          </span>
         </span>
       </div>
       <div id="card_back">
-        <img src="images/bg-card-back.png">
+        <!-- <img class="card_shadow" src="images/bg-card-back.png"> -->
         <span id="card_back_text">000</span>
       </div>
     </div>
     <div id="section_right">
-      <div class="wrap">
-        <span class="title">Cardholder Name</span>
-        <input id="inputOwner" class="inputText" type="text" placeholder="e.g. Jane Appleseed" autofocus maxlength="40">
-      </div>
-      <div class="wrap">
-        <span class="title">Card Number</span>
-        <input id="inputCardNumber" class="inputText" type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
-      </div class="wrap">
-      <div>
-        <span class="title">Exp. Date (MM/YY)</span><br>
-        <input id="monthInput" class="inputText" type="text" placeholder="MM" maxlength="2" style="width: 60px;">
-        <input id="yearInput" class="inputText" type="text" placeholder="YY" maxlength="2" style="width: 60px;">
-      </div>
-      <div class="wrap">
-        <span  class="title">CVC</span>
-        <input id="cvcInput" class="inputText" type="text" placeholder="e.g. 123" maxlength="3">
-      </div>
-      <input id="confirmBtn" type="button" value="Confirm">
-      <div id="completed">
-        Thank you!
-        We've added your card details
-        <input type="button" value="Continue">
+      <div id="form">
+        <div class="wrap">
+          <span class="title">Cardholder Name</span>
+          <input id="inputOwner" class="inputText" type="text" placeholder="e.g. Jane Appleseed" autofocus maxlength="40">
+          <span class="error_message">asdf</span>
+        </div>
+        <div class="wrap">
+          <span class="title">Card Number</span>
+          <input id="inputCardNumber" class="inputText" type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+          <span class="error_message">asdf</span>
+        </div class="wrap">
+          <div id="wrap_date">
+            <div>
+              <span class="title">Exp. Date (MM/YY)</span>
+            </div>
+            <div>
+              <input id="monthInput" class="inputText" type="number" placeholder="MM" min="1" max="12" style="width: 100px;">
+              <input id="yearInput" class="inputText" type="number" placeholder="YY" min="0" max="99" style="width: 100px;">
+              <span class="error_message">asdf</span>
+              
+            </div>
+          </div>
+          <div id="wrap_cvc">
+            <span class="title">CVC</span>
+            <input id="cvcInput" class="inputText" type="text" placeholder="e.g. 123" maxlength="3" style="width: 170px;">
+            <span class="error_message">asdf</span>
+          </div>
+        <input id="confirmBtn" type="button" value="Confirm">
+        <div id="completed">
+          Thank you!
+          We've added your card details
+          <input type="button" value="Continue">
+        </div>
       </div>
     </div>
   </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Jakub</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/jakuboldziej" target="_blank">Jakub</a>.
   </div>
   <script src="main.js"></script>
 </body>
